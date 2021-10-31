@@ -37,7 +37,7 @@
             <header class="header-fixed-top header-transparent z-index-fixed">
                 <nav class="navbar navbar-expand-lg navbar-dark py-3">
                     <div class="container position-relative">
-                        <a class="navbar-brand width-80" href="index.html">
+                        <a class="navbar-brand width-60" data-bigpicture='{"imgSrc": "assets/img/hojun/증명사진.jpg"}' href="#">
                             <img src="assets/img/hojun/증명사진.jpg" alt="" class="img-fluid">
                         </a>
 
@@ -136,13 +136,12 @@
                             <div class="col-xl-10">
                                 <div class="d-inline-flex">
                                     <ul class="js-hover-img">
-                                        <li class="js-hover-img-item">
-                                            <h1 class="js-hover-img-link display-1 mb-0">
+                                            <h2 class="js-hover-img-link display-2 mb-0">
                                                 <small class="fs-4 ls-1 fw-normal">👋안녕하세요 송호준입니다.</small><br>
-                                                Freelance Web Designer and Visual Developer.
-                                            </h1>
-                                            <img src="assets/img/hojun/증명사진.jpg" alt="Image" class="img height-300 w-auto">
-                                        </li>
+                                                <span class="d-inline-block text-primary mb-2"
+                                                data-typed="{&quot;strings&quot;: [&quot;Creative&quot;, &quot;Challenging&quot;, &quot;Impassioned&quot;, &quot;Competent&quot;, &quot;Attractive&quot;]}"></span><Br>
+                                                개발자가 되기 위해 노력합니다
+                                                </h2>
                                     </ul>
                                 </div>
                                 <div class="scrollBtn">
@@ -155,10 +154,10 @@
                 </section>
 
                 <section class="position-relative overflow-hidden" data-scroll-section>
-                    <div class="size-280 position-absolute end-0 bottom-0 me-3 mb-n4 bg-danger d-none d-md-block rounded-circle"
+                    <div class="size-280 position-absolute end-0 bottom-0 me-3 mb-n4 bg-tint-danger d-none d-md-block rounded-circle"
                          data-scroll data-scroll-direction="vertical" data-scroll-speed="6">
                     </div>
-                    <div class="size-280 position-absolute start-0 top-0 me-3 mt-n4 bg-info d-none d-md-block rounded-circle opacity-80"
+                    <div class="size-280 position-absolute start-0 top-0 me-3 mt-n4 bg-tint-info d-none d-md-block rounded-circle opacity-80"
                          data-scroll data-scroll-direction="vertical" data-scroll-speed="6">
                     </div>
                     <div class="container py-12 position-relative">
@@ -489,10 +488,16 @@
                 </div> <!-- / .container -->
             </footer>
         </div>
-        <!--Cursor-->
-        <div class="is-cursor">
-            <div class="v-cursor"></div>
-        </div>
+         <!-- begin Back to Top button -->
+         <a href="#" class="toTop">
+            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 9' class="align-middle rotate-180" width="13"
+                height="9">
+                <path fill='currentColor'
+                    d="M12.25 2.30062L10.8988 0.949371L6.5 5.33854L2.10125 0.949371L0.75 2.30062L6.5 8.05062L12.25 2.30062Z">
+                </path>
+            </svg>
+        </a>
+      
         <!-- scripts -->
         <script src="assets/js/theme.bundle.js"></script>
 
