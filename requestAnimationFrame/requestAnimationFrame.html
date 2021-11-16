@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>requestAnimationFrame</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        	html {
+        		height: 100%;
+        	}
+        	body {
+        		display: flex;
+        		align-items: center;
+        		justify-content: center;
+        		height: 100%;
+        		margin: auto;
+        	}
+        	.ilbuni {
+        		position: absolute;
+        		width: 100px;
+        		left: 50%;
+        		bottom: 0;
+        		margin-left: -50px;
+        	}
+        	.value {
+        		margin-top: -5rem;
+        		font-size: 7rem;
+        		font-weight: 100;
+        		text-align: center;
+        	}
+        </style>
+    </head>
+
+    <body>
+        <img class="ilbuni" src="../assets/img/hojun/증명사진.jpg" alt="호주니">
+        <div class="value">requestAnimationFrame</div>
+
+        <script>
+        	const ilbuni = document.querySelector('.ilbuni');
+        	const value = document.querySelector('.value');
+        	let yPos = 0;
+        	let rafId;
+
+        	function render() {
+        		value.innerHTML = yPos;
+        		ilbuni.style.transform = `translateY(${-yPos}px)`;
+        		yPos += 10;
+
+        		rafId = requestAnimationFrame(render);
+
+        		if (yPos > 500) {
+        			cancelAnimationFrame(rafId);
+        		}
+        	}
+
+        	render();
+
+        	window.addEventListener('click', () => {
+        		cancelAnimationFrame(rafId);
+        	});
+        </script>
+    </body>
+</html>
